@@ -32,6 +32,8 @@ jobs:
         pip install -r ./backend/requirements.txt
     - name: Test with flake8 and django tests
       env:
+        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        IP_HOST: ${{ secrets.IP_HOST }}
         POSTGRES_USER: django_user
         POSTGRES_PASSWORD: django_password
         POSTGRES_DB: django_db
@@ -166,4 +168,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: Дело сделано Милорд!
+          message: Дело сделано Милорд! Taski как после покраски

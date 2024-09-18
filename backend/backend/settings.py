@@ -13,7 +13,7 @@ SECRET_KEY = ('django-insecure-j_89af+30&&4qm*8z9_(^z'
 
 DEBUG = True
 
-ALLOWED_HOSTS = [os.getenv('IP_HOST'), 'localhost',
+ALLOWED_HOSTS = ['89.169.173.107', 'localhost',
                  '127.0.0.1', 'taski-ever.zapto.org']
 
 

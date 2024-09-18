@@ -8,12 +8,11 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = ('django-insecure-j_89af+30&&4qm*8z9_(^z'
-              'z8p4-ho8z_m6ylm0s$h!-p@on1_^')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['89.169.173.107', 'localhost',
+ALLOWED_HOSTS = [os.getenv('IP_HOST'), 'localhost',
                  '127.0.0.1', 'taski-ever.zapto.org']
 
 
